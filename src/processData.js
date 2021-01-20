@@ -1,5 +1,5 @@
 export default function processData(data) {
-  const info = {
+  return {
     name: data.name,
     weather: data.weather[0].main,
     main: {
@@ -9,6 +9,4 @@ export default function processData(data) {
     },
     wind: data.wind.speed
   };
-  
-  return info;
 };
