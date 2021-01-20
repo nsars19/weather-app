@@ -1,0 +1,47 @@
+$body-color: #8cf;
+
+body {
+  background: $body-color;
+  position: relative;
+}
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 50%;
+  height: 350px;
+}
+
+.cloudy {
+  animation-name: moveacross;
+  animation-duration: 20.0s;
+  animation-timing-function: linear;
+  animation-fill-mode: none;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveacross {
+  from {
+    margin-left: -200px;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+
+.sunny {
+  animation-name: hover;
+  animation-duration: 20.0s;
+  animation-timing-function: linear;
+  animation-fill-mode: none;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes hover {
+  
+}
