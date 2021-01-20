@@ -14,9 +14,6 @@ export default function createElements(data) {
   const elems = makeElem(data);
   elems.forEach(elem => wrap.append(elem));
 
-  const weather = document.querySelector(".weather");
-  weather.classList.add(data.weather);
-
   printBackground(data.weather)
 }
 
