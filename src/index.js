@@ -53,4 +53,6 @@ import createElements from "./createElements";
       fetchAndCreate(qArg);
     });
   })();
+
+  fetchAndCreate();
 })();
