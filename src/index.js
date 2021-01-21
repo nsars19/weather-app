@@ -8,11 +8,11 @@ import createElements from "./createElements";
     fetchData(location)
       .then((data) => processData(data))
       .then((data) => createElements(data))
-      .catch((err) => handleError(err))
+      .catch((err) => handleError(err));
   }
 
   function handleError(err) {
-    console.log(err)
+    console.log(err);
     const body = document.querySelector("body");
     const msg = document.createElement("h2");
 
