@@ -3,9 +3,9 @@ export default function processData(data) {
     name: data.name,
     weather: data.weather[0].main,
     main: {
-      temp: data.main.temp,
-      feelsLike: data.main.feels_like,
-      humidity: data.main.humidity,
+      temp: parseInt(data.main.temp),
+      feelsLike: parseInt(data.main.feels_like),
+      humidity: parseInt(data.main.humidity),
     },
     wind: data.wind.speed
   };
