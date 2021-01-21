@@ -58,6 +58,10 @@ function printBackground(weather) {
       img.src = rainy;
       img.classList.add('rainy');
       break;
+    case 'Mist':
+      img.src = rainy;
+      img.classList.add('rainy');
+      break;
     case 'Snow':
       img.src = snowy;
       img.classList.add('snowy');
