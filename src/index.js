@@ -28,11 +28,11 @@ import createElements from "./createElements";
     const wrapper = document.querySelectorAll(".app-wrapper");
     const img = document.querySelectorAll(".bg-img");
 
-    if ([...img].length > 0) {
+    if (img.length > 0) {
       [...img].forEach((image) => image.remove());
     }
 
-    if ([...wrapper].length > 0) {
+    if (wrapper.length > 0) {
       while (wrapper.firstChild) {
         wrapper.firstChild.remove();
       }
