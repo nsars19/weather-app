@@ -72,6 +72,7 @@ header {
   .feelsLike,
   .humidity,
   .wind {
+    margin: 10px;
     position: relative;
     animation-name: comefromleft;
     animation-duration: 0.25s;
