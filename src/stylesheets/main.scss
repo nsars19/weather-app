@@ -1,8 +1,117 @@
 $body-color: #8cf;
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background: $body-color;
   position: relative;
+}
+
+header {
+  height: 50px;
+  margin: 15px 20px;
+
+  .searchbar {
+    position: relative;
+  }
+
+  input {
+    height: 40px;
+    padding: 10px;
+    padding-left: 32px;
+    border: none;
+    border-radius: 20px;
+    background: #ddd;
+    font-size: 16px;
+  }
+
+  i {
+    position: absolute;
+    top: 0;
+    left: 8px;
+  }
+}
+
+.app-wrapper {
+  font-family: 'Courier New', Courier, monospace;
+  color: #111;
+  position: absolute;
+  top: 130px;
+  left: 20px;
+
+  & > h4:not(h4:first-child) {
+    position: relative;
+    margin: 10px 10px;
+  }
+
+  h4:not(h4:first-child), h4::before {
+    animation-name: comefromleft;
+    animation-duration: 0.25s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+}
+
+.name {
+  position: absolute;
+  top: -50px;
+  font-size: 26px;
+  animation-name: comefromleft;
+  animation-duration: .2s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.weather,
+.weather::before {
+  animation-delay: 0.1s;
+}
+.temp,
+.temp::before {
+  animation-delay: 0.2s;
+}
+.feelsLike,
+.feelsLike::before {
+  animation-delay: 0.3s;
+}
+.humidity,
+.humidity::before {
+  animation-delay: 0.45s;
+}
+.wind,
+.wind::before {
+  animation-delay: 0.55s;
+}
+
+.temp::before {
+  content: "temp:";
+  margin-right: 8px;
+}
+.feelsLike::before {
+  content: "feels like:";
+  margin-right: 8px;
+}
+.humidity::before {
+  content: "humidity:";
+  margin-right: 8px;
+}
+.wind::before {
+  content: "wind speed:";
+  margin-right: 8px;
+}
+.temp::after,
+.feelsLike::after {
+  content: "°f";
+}
+.humidity::after {
+  content: "%";
+}
+.wind::after {
+  content: " mph";
 }
 
 .bg-img {
@@ -33,7 +142,6 @@ body {
 }
 
 .sunny {
-  animation-name: hover;
   animation-duration: 20.0s;
   animation-timing-function: linear;
   animation-fill-mode: none;
@@ -42,6 +150,11 @@ body {
   animation-iteration-count: infinite;
 }
 
-@keyframes hover {
-  
+@keyframes comefromleft {
+  from {
+    left: -180px;
+  }
+  to {
+    left: 10px;
+  }
 }
