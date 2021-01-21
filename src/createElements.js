@@ -62,6 +62,9 @@ function printBackground(weather) {
       img.src = snowy;
       img.classList.add('snowy');
       break;
+    case 'Thunderstorm':
+      img.src = thundery;
+      img.classList.add('thundery');
     default:
       break;
   }
