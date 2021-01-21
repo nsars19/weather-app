@@ -145,13 +145,7 @@ header {
 }
 
 .cloudy {
-  animation-name: moveacross;
-  animation-duration: 20.0s;
-  animation-timing-function: linear;
-  animation-fill-mode: none;
-  animation-direction: normal;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
+  animation: moveacross 20.0s linear 0s infinite normal none;
 }
 
 @keyframes moveacross {
@@ -164,12 +158,7 @@ header {
 }
 
 .sunny {
-  animation-duration: 20.0s;
-  animation-timing-function: linear;
-  animation-fill-mode: none;
-  animation-direction: normal;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
+  animation: none 20.0s linear 0s infinite normal none;
 }
 
 @keyframes comefromleft {
