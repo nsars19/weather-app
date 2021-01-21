@@ -41,7 +41,7 @@ import createElements from "./createElements";
     }
   }
 
-  (function app() {
+  (function addSubmitListener() {
     const btn = document.querySelector(".search-submit");
     const q = document.querySelector(".search");
 
