@@ -12,7 +12,6 @@ import createElements from "./createElements";
   }
 
   function handleError(err) {
-    console.log(err);
     const body = document.querySelector("body");
     const msg = document.createElement("h2");
 
